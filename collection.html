@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | Elixiré</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html" aria-label="Elixiré home">
+            <img src="images/elixire-logo.png" alt="Elixiré Luxury Perfumes">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="collection.html" class="active">Collection</a>
+            <a href="index.html#about">Our Story</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" onclick="toggleCart()">
+            BAG (<span id="cart-count">0</span>)
+        </button>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="collection-page-hero">
+            <p class="eyebrow">THE ELIXIRÉ COLLECTION</p>
+            <h1>Find Your<br>Signature Scent.</h1>
+            <p>Curated fragrances for every mood, moment and personality.</p>
+        </section>
+
+        <section class="collection" id="collection">
+            <div class="section-heading">
+                <p class="eyebrow">FIND YOUR SIGNATURE</p>
+                <h2>Our Collection</h2>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" onclick="filterProducts('All', this)">All</button>
+                <button class="filter" onclick="filterProducts('Men', this)">For Him</button>
+                <button class="filter" onclick="filterProducts('Women', this)">For Her</button>
+                <button class="filter" onclick="filterProducts('Unisex', this)">Unisex</button>
+            </div>
+
+            <div class="products" id="products"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="index.html">
+            <img src="images/elixire-logo.png" alt="Elixiré Luxury Perfumes">
+        </a>
+        <p>Luxury in every drop.</p>
+        <p class="copyright">© 2026 Elixiré. All rights reserved.</p>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart(event)">
+        <div class="cart-panel" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <h2>Your Shopping Bag</h2>
+                <button onclick="toggleCart()">✕</button>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">Rs. 0</span></h3>
+                <button class="gold-button checkout" onclick="checkout()">ORDER ON WHATSAPP</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

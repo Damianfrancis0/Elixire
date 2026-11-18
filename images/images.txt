@@ -1,0 +1,16 @@
+image/"images/elixire-logo.png"
+images/"images/berry-bliss.png",
+images/"images/fresh-bloom.png",
+images/"images/velvet-charm.png",
+images/"images/classic-muse.png",
+images/"images/celestial-imperium.png",
+images/"images/velvet-breeze.png",
+images/"images/golden-rush.png",
+images/"images/golden-attar.png",
+images/"images/pink-rush.png",
+images/"images/morning-veil.png",
+images/"images/eros-flame.png",
+images/"images/aqua-minimal.png",
+images/"images/crimson-desire.png",
+images/"images/savage-noir.png",
+images/"images/executive-code.png"

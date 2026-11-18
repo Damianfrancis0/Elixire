@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixiré | Luxury Perfumes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#home" class="logo">
+    <img src="images/elixire-logo.png" alt="Elixiré Luxury Perfumes">
+</a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="collection.html">Collection</a>
+            <a href="#about">Our Story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" onclick="toggleCart()">
+            BAG (<span id="cart-count">0</span>)
+        </button>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">THE ART OF FRAGRANCE</p>
+            <h1>A SCENT THAT<br>DEFINES YOU.</h1>
+            <p>Discover fragrances that leave a lasting impression.</p>
+            <a href="collection.html" class="gold-button">EXPLORE COLLECTION</a>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro" id="about">
+        <p class="eyebrow">WELCOME TO ELIXIRÉ</p>
+        <h2>More than a fragrance.<br>An expression of you.</h2>
+        <p>Discover a world of captivating fragrances, carefully selected for those who appreciate elegance, confidence and individuality.</p>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <p class="eyebrow">THE ELIXIRÉ EXPERIENCE</p>
+        <h2>Leave a Little Mystery<br>Wherever You Go.</h2>
+        <a href="collection.html" class="gold-button">SHOP NOW</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Let's Find Your Signature Scent.</h2>
+        <p>Have a question or want to place an order?</p>
+        <a href="#" onclick="contactWhatsApp(); return false;" class="gold-button">CONTACT US ON WHATSAPP</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#home" class="logo">
+    <img src="images/elixire-logo.png" alt="Elixiré Luxury Perfumes">
+</a>
+        <p>Luxury in every drop.</p>
+        <p class="copyright">© 2026 Elixiré. All rights reserved.</p>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart(event)">
+        <div class="cart-panel" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <h2>Your Shopping Bag</h2>
+                <button onclick="toggleCart()">✕</button>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">Rs. 0</span></h3>
+                <button class="gold-button checkout" onclick="checkout()">ORDER ON WHATSAPP</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
